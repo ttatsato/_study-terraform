@@ -34,7 +34,9 @@ brew install tfenv
 tfenv --version
 ```
 以下のように正常にバージョンが取得できれば、OK。
+
 ```shell script
+tfenv 1.0.2
 
 ```
 
@@ -45,6 +47,7 @@ tfenv --version
 ```shell script
 tfenv list-remote
 ```
+
 とコマンどを実行すると以下のようにインストールできるversionが出力される。
 
 ```shell script
@@ -55,6 +58,7 @@ tfenv list-remote
 ```
 
 ### terrafromをバージョン指定してインストール
+
 ```shell script
 tfenv install 0.12.20
 ```
@@ -70,6 +74,7 @@ Terraform v0.12.20
 ```
 
 ### (tips) tfenvのコマンド
+
 ```shell script
 # インストールできるterraformの確認
 tfenv list-remote
@@ -83,6 +88,7 @@ tfenv list
 # 使用するversionの切り替え
 tfenv use <version>
 ```
+
 ### ファイル .terraform-versionを作成する
 チーム開発のとき、バージョンを明確に共有しておく必要がある。  
 その際、.terraform-versionを作成して共有すれば、`tfenv install`の際にversion指定をしなくていい。
@@ -112,6 +118,7 @@ terraformでインフラの記述を行うためには、専用の構成ファ�
 
 ## tfstateファイルの置き場用のS3を作成しておく。
 AWSコンソールからS3を立ち上げておく。
+
 | | |
 | ---- | ---- |
 | bucket name | terraform-sample-ec2-bucket  |
@@ -293,7 +300,6 @@ Terraform has been successfully initialized!
 ```shell script
 terraform fmt -recursive -check=true
 ```
-
 
 
 ## terraform planを実行して、デプロイ予定のリソースの詳細を確認する。
